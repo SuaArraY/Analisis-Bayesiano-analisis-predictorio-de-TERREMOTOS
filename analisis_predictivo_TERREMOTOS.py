@@ -28,3 +28,12 @@ def muestra_posterior(magnitudes, ubicaciones, nueva_ubicacion, num_muestras=100
 # Predicción para una nueva ubicación
 nueva_ubicacion = 'B'
 nuevas_muestras_magnitud = muestra_posterior(magnitudes, ubicaciones, nueva_ubicacion)
+
+if nuevas_muestras_magnitud is not None:
+    # Diagrama de densidad
+    plt.hist(nuevas_muestras_magnitud, bins=20, density=True, alpha=0.5)
+    plt.xlabel('Magnitud del terremoto')
+    plt.ylabel('Densidad')
+    plt.title(f'Distribución posterior predictiva para la ubicación {nueva_ubicacion}')
+    plt.grid(True)
+    plt.show()
