@@ -25,3 +25,6 @@ def muestra_posterior(magnitudes, ubicaciones, nueva_ubicacion, num_muestras=100
     nuevas_muestras_magnitud = np.random.normal(loc=media_post, scale=desviacion_post, size=num_muestras)
     
     return nuevas_muestras_magnitud
+# Predicción para una nueva ubicación
+nueva_ubicacion = 'B'
+nuevas_muestras_magnitud = muestra_posterior(magnitudes, ubicaciones, nueva_ubicacion)
